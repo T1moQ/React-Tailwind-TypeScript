@@ -4,7 +4,7 @@ export default {
 	theme: {
 		screens: {
 			xl: '1440px',
-			md: '375px',
+			sm: '375px',
 		},
 		colors: {
 			'almost-white': 'hsl(0, 0%, 98%)',
