@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { NavItem } from '../navitem'
+import { NavItem } from './navitem'
 import { Logo } from '../../icons/logo'
 import { COMPANY, FEATURES } from '../../utils/consts'
 import { Button } from '../button'

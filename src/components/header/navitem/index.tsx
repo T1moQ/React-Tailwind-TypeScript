@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
-import { ActionArrow } from '../../icons/action-arrow'
-import { CompanyProp, FeaturesProp } from '../../utils/consts'
+import { ActionArrow } from '../../../icons/action-arrow'
+import { CompanyProp, FeaturesProp } from '../../../utils/consts'
 
 type NavItemProps = {
 	text?: string
