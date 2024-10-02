@@ -27,15 +27,18 @@ export const NavItem: FC<NavItemProps> = ({ text = '', children }) => {
 			</div>
 			{/* Преобразуем массив объектов children в JSX */}
 			{isOpen && children && (
-				<div className="absolute mt-2 bg-white shadow-lg rounded-lg">
+				<div className="absolute mt-2 bg-almost-white shadow-lg rounded-lg">
 					<ul>
 						{children.map((child) => (
 							<li
 								key={child.id}
-								className="flex items-center space-x-2 p-2 hover:bg-gray-100"
+								className="flex items-center space-x-2 p-2 hover:bg-medium-grey cursor-pointer"
 							>
 								{child.icon && <child.icon />} {/* Отображаем иконку */}
-								<span>{child.text}</span> {/* Отображаем текст */}
+								<span className="text-medium-grey hover:text-almost-white font-bold">
+									{child.text}
+								</span>{' '}
+								{/* Отображаем текст */}
 							</li>
 						))}
 					</ul>
