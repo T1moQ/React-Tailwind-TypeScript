@@ -13,11 +13,11 @@ export const Button: FC<ButtonProps> = ({
 }) => {
 	return (
 		<button
-			className={`text-medium-grey py-2 px-5 ${
+			className={` py-2 px-5 ${
 				hasBorder ? 'border-2 border-almost-black rounded-lg' : ''
 			} ${
 				isFilled
-					? 'bg-almost-black text-almost-white rounded-lg font-bold py-4 px-6 mx-0 hover:bg-transparent hover:text-almost-black border-2 border-almost-black'
+					? 'bg-almost-black text-almost-white rounded-lg font-bold py-4 px-6 mx-0 hover:bg-almost-white hover:text-almost-black border-2 border-almost-black'
 					: ''
 			}`}
 		>
