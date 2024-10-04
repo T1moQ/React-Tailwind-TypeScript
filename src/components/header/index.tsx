@@ -1,11 +1,14 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { NavItem } from './navitem'
 import { Logo } from '../../icons/logo'
 import { COMPANY, FEATURES } from '../../utils/consts'
 import { Button } from '../button'
 import { Menu } from '../../icons/menu'
+import { MenuClose } from '../../icons/menu-close'
+import { MobileMenu } from '../mobile-menu'
 
 export const Header: FC = () => {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 	return (
 		<header className="flex items-center">
 			<Logo />
@@ -19,9 +22,13 @@ export const Header: FC = () => {
 				<Button children="Login" isFilled={false} hasBorder={true} />
 				<Button children="Register" isFilled={false} hasBorder={false} />
 			</div>
-			<div className="flex ml-auto cursor-pointer z-30 xl:hidden">
-				<Menu />
+			<div
+				className="flex ml-auto cursor-pointer z-30 xl:hidden"
+				onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+			>
+				{isMobileMenuOpen ? <MenuClose /> : <Menu />}
 			</div>
+			<MobileMenu isOpen={isMobileMenuOpen} />
 		</header>
 	)
 }

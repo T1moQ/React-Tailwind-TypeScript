@@ -27,7 +27,7 @@ export const NavItem: FC<NavItemProps> = ({ text = '', children }) => {
 			</div>
 			{/* Преобразуем массив объектов children в JSX */}
 			{isOpen && children && (
-				<div className="absolute mt-2 bg-almost-white shadow-lg rounded-lg">
+				<div className="absolute mt-2 bg-almost-white shadow-lg rounded-lg z-30">
 					<ul>
 						{children.map((child) => (
 							<li
